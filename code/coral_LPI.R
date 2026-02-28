@@ -12,8 +12,8 @@ commercial_reef = fishbase %>%
   filter(Importance == "commercial") %>%
   # inner join to get ONLY commercial fishes
   inner_join(reef_fish, by = "scientific_name") %>%
-  # actually lets just only calculate LPI for this one fish
-  filter(scientific_name %in% c("Coris picta"))
+  # actually lets just only calculate LPI for several fish
+  filter(scientific_name %in% c("Coris picta","Aluterus scriptus"))
 
 ### Run the LPI for commercial fishes
 # set up the data for LPI package
